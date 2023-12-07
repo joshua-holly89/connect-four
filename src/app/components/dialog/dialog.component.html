@@ -1,0 +1,12 @@
+<div class="main-container">
+  <h2 mat-dialog-title>{{ message }}</h2>
+  <mat-dialog-actions>
+    <div class="flex-container" >
+      <button mat-flat-button color="primary" *ngIf="!isConfirm" (click)="onClose()">Close</button>
+      <ng-container *ngIf="isConfirm" >
+        <button mat-flat-button color="primary" cdkFocusInitial (click)="onYesClick()">Yes</button>
+        <button mat-flat-button color="accent" (click)="onNoClick()">No</button>
+      </ng-container>
+    </div>
+  </mat-dialog-actions>
+</div>

@@ -1,0 +1,16 @@
+<div class="flex-container">
+  <h1>Connect four</h1>
+  <div class="round-container">
+
+    <div class="grid-container">
+      <ng-container *ngFor="let row of board; index as rowIndex">
+        <ng-container *ngFor="let column of row; index as columnIndex">
+          <div class="grid-item" (click)="makeATurn(columnIndex)">
+              {{positionToColourSymbol(columnIndex, rowIndex)}}
+            </div>
+          </ng-container>
+        </ng-container>
+      </div>
+    </div>
+  <button class="start-button" mat-flat-button color="primary" (click)="startGame()">Start New Game</button>
+</div>
