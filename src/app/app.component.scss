@@ -1,24 +1,32 @@
 .grid-container {
   display: grid;
-  grid-template-columns: 100px 100px 100px 100px 100px 100px 100px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   padding: 10px;
+  width: 80%;
+  max-width: 1000px;
+  container-name: grid;
 }
 
 
 .grid-item {
   background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow:inset 0px 0px 0px 1px rgb(56, 56, 56);
+  -moz-box-shadow:inset 0px 0px 0px 1px rgb(56, 56, 56);
+  box-shadow:inset 0px 0px 0px 1px rgb(56, 56, 56);
   background-color: #2196F3;
-  padding: 20px;
-  font-size: 66px;
+  aspect-ratio: 1/1;
   text-align: center;
-  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-  -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE 10 and IE 11 */
-  user-select: none; /* Standard syntax */
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.resize-container {
+  resize: both;
+  width: 100%;
 }
 
 .flex-container{

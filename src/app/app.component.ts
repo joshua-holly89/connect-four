@@ -32,7 +32,7 @@ export class AppComponent implements OnInit{
     if(this.isGameRunning == false){
       this.dialog.open(DialogComponent, {
         data: {
-          message: 'Game is not already over!',
+          message: 'Game is already over!',
           isConfirm: false
         }
       });
